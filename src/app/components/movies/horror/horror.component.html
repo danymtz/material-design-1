@@ -1,1 +1,3 @@
-<p>horror works!</p>
+<ng-container *ngFor="let movie of movies">
+    <img mat-raised-button (click)="openDialog('0ms', '0ms',movie)" [src]="'https://image.tmdb.org/t/p/original'+movie.poster_path" alt="" style="width: 200px;">
+</ng-container>

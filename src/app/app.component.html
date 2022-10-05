@@ -6,7 +6,7 @@
           <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" mat-button (click)="drawer.toggle()">
             <mat-icon>menu</mat-icon>
           </button>
-          <span>My App</span>
+          <span><img src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg" alt="" style="height: 25px"></span>
           <span class="example-spacer"></span>
           <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
             <mat-icon>favorite</mat-icon>
@@ -22,6 +22,9 @@
         <mat-tab label="Second"> Content 2 </mat-tab>
         <mat-tab label="Third"> Content 3 </mat-tab>
       </mat-tab-group>
+
+      <router-outlet></router-outlet>
+
     </mat-drawer-content>
 
   <mat-drawer #drawer class="example-sidenav" mode="side">
@@ -36,8 +39,8 @@
       <a mat-list-item routerLink="/movies/anime" routerLinkActive="selec">Anime</a>
     </mat-nav-list>
   </mat-drawer>
-
+  
 </mat-drawer-container>
 
 
-<router-outlet></router-outlet>
+
