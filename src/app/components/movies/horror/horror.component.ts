@@ -3,12 +3,6 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { RequestService } from 'src/app/services/request.service';
 import { DialogComponent } from '../../shared/dialog/dialog.component';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
-
-
 @Component({
   selector: 'app-horror',
   templateUrl: './horror.component.html',
@@ -19,10 +13,12 @@ export class HorrorComponent implements OnInit {
   movies: any[] = [];
   showFiller: boolean = true;
 
+  horror: number = 27;
+
   constructor(public requestService: RequestService, public dialog: MatDialog){}
 
   ngOnInit (){
-    this.requestService.getMovies().subscribe({
+    this.requestService.getMovies(this.horror).subscribe({
       next: resp => {
         this.movies = resp.results;
         console.log('API ',this.movies);

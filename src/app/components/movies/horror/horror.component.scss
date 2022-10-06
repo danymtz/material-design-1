@@ -1,0 +1,19 @@
+.container{
+    background-color: #212121;
+    width: auto !important;
+    height: auto !important;
+}
+
+.image{
+    padding: 30px;
+    img{
+        width: 150px; 
+        padding: 10px;
+    }
+
+    :hover{
+        border-radius: 5px;
+        border-width: 10px;
+        border: yellow;
+    }
+}

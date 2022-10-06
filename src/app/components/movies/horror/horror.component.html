@@ -1,3 +1,7 @@
-<ng-container *ngFor="let movie of movies">
-    <img mat-raised-button (click)="openDialog(movie)" [src]="'https://image.tmdb.org/t/p/original'+movie.poster_path" alt="" style="width: 200px; margin: 10px;">
-</ng-container>
+<div class="container">
+    <div class="image">
+        <ng-container *ngFor="let movie of movies">
+            <img mat-raised-button (click)="openDialog(movie)" [src]="'https://image.tmdb.org/t/p/original'+movie.poster_path">
+        </ng-container>
+    </div>
+</div>

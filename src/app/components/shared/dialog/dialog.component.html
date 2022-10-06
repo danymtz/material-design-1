@@ -1,17 +1,35 @@
-<img [src]="'https://image.tmdb.org/t/p/original'+data.backdrop_path" alt="" style="width: 750px;">
-<p>{{data.title}}</p>
-<p>{{data.overview}}</p>
+<div class="container">
+    <!--Button close-->
+    <div class="dialog-close">
+        <mat-dialog-actions>
+            <button mat-button mat-dialog-close>
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-dialog-actions>  
+    </div>     
+    <!--Button close-->
 
-<div>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" style="margin: 10px;" (click) = "addMovie(data)" [style.color]="colorAdd">
-        <mat-icon>add</mat-icon> <br>
-        <p>Mi lista</p>
-    </button>
+    <!--Content Dialog-->
+    <mat-dialog-content>
 
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" style="margin: 10px;" (click) = "likeMovie()" [style.color]="colorLike">
-        <mat-icon>thumb_up</mat-icon><br>
-        <p>Votar</p>
-    </button>
+        <img [src]="'https://image.tmdb.org/t/p/original'+data.backdrop_path" style="width: 100vh">
+        
+        <h1 mat-dialog-title>{{data.title | uppercase}}</h1>
+        <p>{{data.overview}}</p>
+
+        <button mat-icon-button class="example-icon favorite-icon" style="margin: 10px;" (click) = "addMovie(data)" [style.color]="colorAdd">
+            <mat-icon>add</mat-icon> <br>
+            <p>Mi lista</p>
+        </button>
+
+        <button mat-icon-button class="example-icon favorite-icon" style="margin: 10px;" (click) = "likeMovie()" [style.color]="colorLike">
+            <mat-icon>thumb_up_border</mat-icon><br>
+            <p>Votar</p>
+        </button>
+        
+    </mat-dialog-content>
+    <!--Content Dialog-->
 </div>
+
 
 

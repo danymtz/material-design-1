@@ -1,21 +1,21 @@
 import { JsonPipe } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.scss']
+  styleUrls: ['./dialog.component.scss'],
+  encapsulation: ViewEncapsulation.None //Línea para quitar padding
 })
 export class DialogComponent implements OnInit {
-
   flagAdd: boolean = true;
-  colorAdd: string = '#000000'
+  colorAdd: string = '#FFFFFF'
 
   flagLike: boolean = true;
-  colorLike: string = '#000000'
+  colorLike: string = '#FFFFFF'
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(public dialogRef: MatDialogRef<DialogComponent>, @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
 
@@ -25,13 +25,13 @@ export class DialogComponent implements OnInit {
     console.log('Movie add');
     localStorage.setItem('movie', JSON.stringify(movie))
     this.flagAdd = !this.flagAdd;
-    if (this.flagAdd) this.colorAdd = '#000000';
+    if (this.flagAdd) this.colorAdd = '#FFFFFF';
       else this.colorAdd = 'green';    
   }
 
   likeMovie(){
     this.flagLike = !this.flagLike;
-    if (this.flagLike) this.colorLike = '#000000';
+    if (this.flagLike) this.colorLike = '#FFFFFF';
       else this.colorLike = 'green';
   }
 }

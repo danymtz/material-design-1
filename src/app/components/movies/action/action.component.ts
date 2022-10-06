@@ -4,16 +4,16 @@ import { RequestService } from 'src/app/services/request.service';
 import { DialogComponent } from '../../shared/dialog/dialog.component';
 
 @Component({
-  selector: 'app-comedia',
-  templateUrl: './comedia.component.html',
-  styleUrls: ['./comedia.component.scss']
+  selector: 'app-action',
+  templateUrl: './action.component.html',
+  styleUrls: ['./action.component.scss']
 })
-export class ComediaComponent implements OnInit {
+export class ActionComponent implements OnInit {
 
   movies: any[] = [];
   showFiller: boolean = true;
 
-  horror: number = 35;
+  horror: number = 28;
 
   constructor(public requestService: RequestService, public dialog: MatDialog){}
 
@@ -29,5 +29,4 @@ export class ComediaComponent implements OnInit {
   openDialog(movie: any[]): void {
     this.dialog.open(DialogComponent, {data: movie});    
   }
-
 }
