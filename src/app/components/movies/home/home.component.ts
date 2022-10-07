@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../../shared/dialog/dialog.component';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  movies: any[] = JSON.parse(localStorage.getItem('movie-list')??'[]'); // Obtenemos el arreglo del localStorage
 
-  ngOnInit(): void {
+  showFiller: boolean = true;
+
+  constructor(public dialog: MatDialog){}
+
+  ngOnInit (){
+
+  }
+
+  openDialog(movie: any[]): void {
+    this.dialog.open(DialogComponent, {data: movie});    
   }
 
 }

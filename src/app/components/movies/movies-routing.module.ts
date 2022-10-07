@@ -5,6 +5,8 @@ import { HorrorComponent } from './horror/horror.component';
 import { ComediaComponent } from './comedia/comedia.component';
 import { HomeComponent } from './home/home.component';
 import { ActionComponent } from './action/action.component';
+import { AdventureComponent } from './adventure/adventure.component';
+import { CrimeComponent } from './crime/crime.component';
 
 const routes: Routes =[
   {
@@ -19,13 +21,25 @@ const routes: Routes =[
         component: ActionComponent
       },
       {
+        path: 'adventure',
+        component: AdventureComponent
+      },
+      {
+        path: 'crime',
+        component: CrimeComponent
+      },
+      {
         path: 'horror',
         component: HorrorComponent
       },
       {
         path: 'comedia',
         component: ComediaComponent
-      } 
+      },
+      {
+        path: '**',
+        redirectTo: 'home'
+      }
     ]
   }
 ] 

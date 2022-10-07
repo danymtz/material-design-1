@@ -1,5 +1,4 @@
 <div class="container">
-    <h1 style="color: white; padding: 20px">Agregadas recientemente</h1>
     <div class="image">
         <ng-container *ngFor="let movie of movies">
             <img mat-raised-button (click)="openDialog(movie)" [src]="'https://image.tmdb.org/t/p/original'+movie.poster_path">

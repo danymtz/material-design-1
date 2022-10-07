@@ -7,6 +7,8 @@ import { ComediaComponent } from './comedia/comedia.component';
 import { HomeComponent } from './home/home.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ActionComponent } from './action/action.component';
+import { AdventureComponent } from './adventure/adventure.component';
+import { CrimeComponent } from './crime/crime.component';
 
 
 
@@ -17,7 +19,9 @@ import { ActionComponent } from './action/action.component';
     ComediaComponent,
 
     HomeComponent,
-    ActionComponent
+    ActionComponent,
+    AdventureComponent,
+    CrimeComponent
   ],
   imports: [
     CommonModule,
