@@ -30,4 +30,14 @@ export class HorrorComponent implements OnInit {
     this.dialog.open(DialogComponent, {data: movie});    
   }
 
+  onScroll(event: any){
+    if (event.target.offsetHeight+event.target.scrollTop > event.target.scrollHeight){
+      this.requestService.getMovies(this.horror).subscribe(
+        resp => {
+          this.movies = this.movies.concat(resp);
+          console.log(this.movies);
+        })
+    }
+  }
+
 }

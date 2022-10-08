@@ -25,8 +25,8 @@ export class DialogComponent implements OnInit {
     let favoriteList = JSON.parse(localStorage.getItem('movie-list')??'[]'); //Obtenemos de local storage 
     let finded: boolean = false;
 
-    for (let i=0; i<favoriteList.length; i++){ // Recorremos el arreglo de peliculas
-      if(movie.id == favoriteList[i].id){
+    for (let i=0; i<favoriteList.length; i++){  // Recorremos el arreglo de peliculas
+      if(movie.id == favoriteList[i].id){       // Compara los ID de las peliculas guardadas
         this.iconAdd = 'add';
         this.colorAdd = '#FFFFFF';
         finded = true;

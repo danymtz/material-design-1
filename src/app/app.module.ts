@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './components/shared/material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DialogComponent } from './components/shared/dialog/dialog.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DialogComponent } from './components/shared/dialog/dialog.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
