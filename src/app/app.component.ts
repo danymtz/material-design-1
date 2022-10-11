@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RequestService } from './services/request.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,5 @@ import { RequestService } from './services/request.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'materialTest';
+  title = 'Dany Martinez';
 }

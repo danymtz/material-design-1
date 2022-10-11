@@ -8,15 +8,16 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatDialogModule} from '@angular/material/dialog';
-import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatTabsModule,
     MatSidenavModule,
     MatListModule,
     MatDialogModule

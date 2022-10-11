@@ -1,0 +1,30 @@
+<!-- import {MatToolbarModule} from '@angular/material/toolbar'; -->
+<!-- import {MatButtonModule} from '@angular/material/button'; -->
+<!-- import {MatIconModule} from '@angular/material/icon'; -->
+
+<mat-toolbar style="color: white !important; background-color: black !important;">
+        
+    <!--Boton Menú-->
+    <button mat-icon-button class="example-icon" mat-button (click)="showSideNav.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <!--Logo de Netflix-->
+    <img src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg" style="height: 25px">
+
+    <!--Espacio en blanco-->
+    <span class="example-spacer"></span>
+
+    <!--botón de busqueda-->
+    <button mat-icon-button class="example-icon favorite-icon">
+        <mat-icon>search</mat-icon>
+    </button>
+
+    <!--botón de más-->
+    <button mat-icon-button class="example-icon">
+        <mat-icon>more_horiz</mat-icon>
+    </button>
+
+</mat-toolbar>
+            
+
